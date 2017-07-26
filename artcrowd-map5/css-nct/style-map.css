@@ -1,0 +1,590 @@
+#map-canvas {
+    position: absolute ;
+    z-index: 0 ;
+    width: 100% ;
+    height: 100% ;
+    min-height: 838px ;
+}
+#near-me {
+    position: absolute ;
+    right: 81px ;
+    z-index: 9999 ;
+    display: none ;
+    background-color: #fff ;
+    border: 1px solid #bcbdc0 ;
+    color: #000 ;
+    font-family: 'sofia_pro_regularregular' ;
+    padding: 15px 26px ;
+    font-size: 18px ;
+}
+#surprise-me {
+    position: absolute ;
+    right: 219px ;
+    z-index: 9999 ;
+    display: none ;
+    background-color: #fff ;
+    border: 1px solid #bcbdc0 ;
+    color: #000 ;
+    font-family: 'sofia_pro_regularregular' ;
+    padding: 15px 26px ;
+    font-size: 18px ;
+}
+#near-me:hover, #surprise-me:hover {
+    color: #3d71f9 ;
+}
+.page-wrap {
+    position: absolute ;
+    width: 100% ;
+    z-index: 1 ;
+}
+.gm-style-cc:last-child {
+    display: none !important;
+}
+a[title="Report errors in the road map or imagery to Google"] {
+    display: none !important;
+}
+#map-left-pane {
+    position: absolute ;
+    z-index: 1 ;
+    border-right: 1px solid #a7a9ab ;
+    width: 34.31% ;
+    max-width: 468px ;
+    height: 100% ;
+    min-height: 838px ;
+    background: -webkit-linear-gradient(bottom, rgba(255,255,255,0.3), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgba(255,255,255,0.3), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, rgba(255,255,255,0.3), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,1)); /* Standard syntax (must be last) */
+}
+#left-pane-wrapper {
+    padding: 115px 15px 0 15px ;
+}
+#avatar-big-wrapper {
+    position: relative ;
+    margin: auto ;
+    width: 100% ;
+    height: auto ;
+    max-height: 286px ;
+    max-width: 286px ;
+}
+#left-pane-info {
+	display: flex ;
+	flex-direction: column ;
+    padding-left: 78px ;
+    padding-right: 50px ;
+}
+#left-pane-info > div {
+
+}
+#left-pane-info h2 {
+    margin-top: 50px ;
+    font-family: 'sofia_probold' ;
+    font-weight: normal ;
+    margin-bottom: 0 ;
+}
+#left-pane-info h3 {
+    margin-top: 8px ;
+    margin-left: 2px ;
+    font-size: 16px ;
+    font-family: 'sofia_pro_regularregular' ;
+    font-weight: normal ;
+}
+#left-pane-info > div > p {
+    font-family: 'sofia_prolight' ;
+    font-weight: normal ;
+    font-size: 16px ;
+    margin-bottom: 40px ;
+}
+#left-pane-info > div > p > a {
+    font-size: 14px ;
+    font-family: 'sofia_probold' ;
+    font-weight: normal ;
+}
+#left-pane-info > div > a.btn {
+    float: left ;
+    font-size: 12px ;
+    letter-spacing: 3px ;
+    font-family: 'sofia_probold' ;
+    padding: 16px 38px ;
+    color:#000 ;
+    border-color: #c0c1c4 ;
+}
+#left-pane-info > div > a.btn:hover {
+    color: #3d71f9 ;
+}
+a#view-gallery-a {
+    float: right ;
+    font-family: 'sofia_probold' ;
+    line-height: 52px ;
+}
+a#view-gallery-a:hover {
+
+}
+a#view-gallery-a:before {
+    display: inline-block ;
+    margin-right: 7px ;
+    margin-bottom: -4px ;
+    content: ' ' ;
+    background-image: url('../images-nct/view-gallery.svg');
+    background-size: 21px 21px ;
+    height: 21px ;
+    width: 21px ;
+}
+#avatar-big {
+    border-radius: 50% ;
+    display: inline-block ;
+    width: 100% ;
+    height: 100% ;
+    overflow: hidden ;
+    vertical-align: middle ;
+}
+.knob {
+    display: none ;
+}
+#funded-label {
+    position: absolute ;
+    z-index: 3 ;
+    padding: 17px 25px ;
+    background-color: #fff ;
+    border: 1px solid #c0c1c4 ;
+    border-radius: 3px ;
+    bottom: -30px ;
+    left: 1px ;
+}
+#funded-label > span {
+    color: #33b9ab ;
+    font-weight: 700 ;
+    font-size: 15px ;
+}
+
+#map-bottom-pane {
+    position: absolute ;
+    bottom: 0 ;
+    width: 100% ;
+    height: 67px ;
+    border-top: 1px solid #a7a9ab ;
+    display: flex ;
+}
+a.map-control {
+    height: 100% ;
+    border-right: 1px solid #a7a9ab ;
+    font-size: 35px ;
+    line-height: 67px ;
+    padding: 0 25px ;
+}
+a.map-control > i {
+    font-weight: 400 ;
+}
+#bottom-pane-info {
+    width: 100% ;
+}
+p#bottom-pane-info-p {
+    float: left ;
+    line-height: 67px ;
+    padding-left: 20px ;
+    margin-bottom: 0 ;
+}
+a#bottom-pane-info-a {
+    float: right ;
+    line-height: 67px ;
+    padding-right: 35px ;
+    font-family: 'sofia_probold' ;
+}
+#map-logo-wrapper {
+    position: absolute ;
+    z-index: 222 ;
+    left: 0 ;
+    top: 25px ;
+    width: 100% ;
+    height: 33px ;
+    background: none ;
+    pointer-events: none ;
+    
+}
+a#map-logo {
+    display: block ;
+    position: static ;
+    width: 171px ;
+    height: 33px ;
+    margin-left: auto ;
+    margin-right: auto ;
+    pointer-events: auto ;
+}
+#nav-map {
+    position: absolute ;
+    z-index: 223 ;
+    right: 0 ;
+    top: 0 ;    
+}
+#dropdown-user {
+    right: 0 ;
+    left: -57px ;
+    right: 57px ;
+}
+#knot-wrapper {
+    position: absolute ;
+    width: 100% ;
+    height: 100% ;
+    z-index: 2 ;
+}
+.navbar-nav .open .dropdown-menu { position:static}
+.navbar-nav { margin: 26px 0 0 0 }
+.navbar-right {margin-right: 0 }
+.navbar-nav > li.user-menu > a { margin-top: -8px }
+li#ddt-li {
+    padding-right: 33px ;
+    float: right ;
+}
+a#mobile-pane-close, a#mobile-pane-open {
+	display: none ;
+}
+#follow-port {
+	display: none ;
+}
+a.map-control-port, br.br-port, a#see-more-port {
+	display: none ;
+}
+@media screen and (max-width: 1279px) {
+    a#view-gallery-a, #left-pane-info > div > a.btn {
+        float: none ;
+        display: block ;
+    }
+    a#view-gallery-a {
+        text-align: center ;
+    }
+    #left-pane-wrapper {
+        padding-top: 75px ;
+    }
+    #bottom-pane-info-a {
+        display: none ;
+    }
+}
+@media screen and (max-width: 1023px) {
+    #left-pane-info {
+        padding-left: 0 ;
+        padding-right: 0 ;
+    }
+    #bottom-pane-info {
+        display: none ;
+    }
+    #bottom-pane-info-a {
+        display: block ;
+    }
+    a.map-control {
+        width: 50% ;
+        text-align: center ;
+    }
+}
+@media screen and (max-width: 736px) {
+	a#mobile-pane-close {
+		display: block ;
+		position: relative ;
+		width: 100% ;
+		text-align: center ;
+		font-size: 32px ;
+		line-height: 32px ;
+		z-index: 100 ;
+	}
+	a#mobile-pane-open {
+		width: 40px ;
+		text-align: center ;
+		font-size: 32px ;
+		line-height: 48px ;
+	}
+	a#mobile-pane-close > i, a#mobile-pane-open > i {
+		font-weight: 400 ;
+	}
+	#map-bottom-pane {
+		bottom: 0 ;
+	}
+    #near-me {
+        display: none !important ;
+    }
+    #surprise-me {
+        display: none !important ;
+    }
+    a.map-control {
+        width: auto ;
+    }
+    a.map-control:first-of-type {
+    	border-left: 1px solid #a7a9ab ;
+    }
+    #map-left-pane {
+        bottom: 0 ;
+        border-top: 1px solid #a7a9ab ;
+        border-right: none ;
+        width: 100% ;
+        max-width: 100% ;
+        height: 57px ;
+        min-height: 0 ;
+        background: rgba(255, 255, 255, 0.85);
+    }
+    #map-left-pane.open {
+    	height: 227px ; /* 210 + 16 + 1 */
+    }
+    #left-pane-info {
+		position: relative ;
+		width: 100% ;
+		flex-direction: row ;
+		height: 56px ;
+		margin-left: 110px ;
+    }
+    #left-pane-info.open {
+		height: 210px ;
+    	margin-left: 20px ;
+    }
+    #left-pane-info > div:first-child {
+		flex-grow: 1 ;
+		display: flex ;
+		justify-content: space-between ;
+    }
+    #left-pane-info > div.open:first-child {
+    	display: block ;
+    }
+    #left-pane-info > div:nth-child(2) {
+    	flex-basis: 150px ;
+    	flex-shrink: 0 ;
+    	padding: 0 15px ;
+    }
+    #left-pane-info > div > a.btn {
+        float: none ;
+        padding: 6px 12px ;
+        font-size: 16px ;
+        margin-top: 40px ;
+    }
+	a#view-gallery-a {
+		float: none ;
+		line-height: 31px ;
+		font-size: 12px ;
+		margin-left: 0 ;
+		margin-top: 12px ;
+	}
+	a#view-gallery-a.open {
+		margin-left: -22px ;
+		margin-top: 30px ;
+	}
+    #bottom-pane-info {
+        display: block ;
+    }
+    #map-logo-wrapper {
+        width: 171px ;
+        left: 15px ;
+    }
+    #map-canvas {
+        min-height: 0 ;
+    }
+    #left-pane-wrapper {
+        /*display: none ;*/
+        margin-top: 0 ;
+        display: flex ;
+        flex-direction: row ;
+        align-items: flex-start ;
+        padding: 0 ;
+        z-index: 98 ;
+    }
+    #left-pane-wrapper.open {
+    	margin-top: -16px ;
+    }
+    #avatar-big-wrapper {
+        max-width: 70px ;
+        max-height: auto ;
+        padding-left: 20px ;
+        margin-left: 0 ;
+        margin-right: 0 ;
+        margin-top: 3px ;
+    }
+	#avatar-big-wrapper.open {
+		max-width: 180px ;
+		margin-top: 20px ;
+	}
+	#left-pane-info h2 {
+		margin: 0 ;
+		font-size: 18px ;
+		line-height: 54px ;
+		overflow: hidden ;
+	}
+	#left-pane-info h2.open {
+		margin-top: 8px ;
+		line-height: 1.1 ;
+		overflow: visible ;
+	}
+	#left-pane-info h3 {
+		font-size: 12px ;
+		line-height: 54px ;
+		margin: 0 ;
+		overflow: hidden ;
+	}
+	#left-pane-info h3.open {
+		margin: 5px 0 5px 2px ;
+		line-height: 1.1 ;
+		overflow: visible ;
+	}
+    #left-pane-info > div > p {
+        font-size: 12px ;
+        margin-bottom: 10px ;
+        margin-top: 0px ;
+    }
+    #left-pane-follow {
+        padding: 0 ;
+    }
+	#funded-label {
+		left: 80px ;
+		top: 12px ;
+		bottom: auto ;
+		width: 90px ;
+		padding: 3px 7px ;
+		font-size: 11px ;
+	}
+	#funded-label.open {
+		left: 20px ;
+		top: 150px ;
+		width: auto ;
+		bottom: -15px ;
+	}
+	#funded-label > span {
+		font-size: 12px ;
+	}
+	#left-pane-info > div > p > a {
+		font-size: 12px ;
+	}
+}
+@media screen and (max-width: 632px) {
+	#bottom-pane-info-a {
+		display: none ;
+	}
+}
+@media screen and (max-width: 483px) {
+	a#mobile-pane-open {
+		margin-left: 40% ;
+	}
+	#funded-label.open {
+		top: 90px ;
+	}
+	#left-pane-info {
+		display: block ;
+		margin-left: 10px ;
+	}
+	#left-pane-info > div:nth-child(2) {
+		padding-left: 0 ;
+		padding-right: 10px ;
+	}
+	#left-pane-info h2 {
+		margin-top: 15px ;
+	}
+	#left-pane-info h2.open {
+
+	}
+	#left-pane-info h3 {
+		margin: 0 ;
+		margin-right: 10px ;
+	}
+	#left-pane-info h3.open {
+		margin-right: 0 ;
+	}
+	#follow-port {
+		display: block ;
+		padding-left: 10px ;
+	}
+	a.map-control {
+		display: none ;
+	}
+	a.map-control-port {
+		display: inline ;
+		padding: 0 15px ;
+		text-align: center ;
+		font-size: 32px ;
+		line-height: 40px ;
+	}
+	a.map-control-port > i {
+		font-weight: 400 ;
+	}
+	a.map-control-port:first-child {
+		margin-left: -15px ;
+		margin-right: 35px ;
+	}
+	br.br-port {
+		display: inline ;
+	}
+	a#see-more-port {
+		display: block ;
+		float: left ;
+		font-size: 12px ;
+		line-height: 31px ;
+		font-family: 'sofia_probold' ;
+		font-weight: normal ;
+	}
+	p#bottom-pane-info-p {
+		line-height: 20px ;
+	}
+    #bottom-pane-info-a, #left-pane-info > div > p { 
+        display: none ;
+    }
+    #left-pane-info > div > a.btn {
+        float: none ;
+    }
+    #follow-port > a.btn {
+        padding: 6px 15px ;
+        font-size: 12px ;
+        letter-spacing: 3px ;
+	    font-family: 'sofia_probold' ;
+	    padding: 6px 18px ;
+	    color:#000 ;
+	    border-color: #c0c1c4 ;
+	    margin-top: 17px ;
+        
+    }
+	#follow-port > a.btn:hover {
+	    color: #3d71f9 ;
+	}
+	a#view-gallery-a {
+		float: right ;
+		display: block ;
+		margin-top: 0 ;
+	}
+    #map-canvas {
+        min-height: 0 ;
+    }
+    #avatar-big-wrapper {
+        max-width: 120px ;
+        margin-top: 3px ;
+        padding-left: 10px ;
+        max-width: 64px ;
+    }
+    #avatar-big-wrapper.open {
+    	padding-left: 20px ;
+    	max-width: 120px ;
+    	margin-top: 0 ;
+    }
+    #map-logo-wrapper {
+        display: none ;
+    }
+    #nav-map {
+        width: 100% ;
+    }
+    .nav.navbar-nav.navbar-right {
+        float: none ;
+    }
+    #dropdown-user {
+        left: 10px ;
+        right: 25px ;
+    }
+    #dropdown-user > ul {
+        text-align: left ;
+    }
+    li#ddt-li {
+        padding-right: 13px ;
+        float: right ;
+    }
+    #map-left-pane {
+
+    }
+    #map-left-pane.open {
+    	height: 207px ;
+    }
+    #left-pane-info {
+		
+    }
+    #left-pane-info.open {
+    	height: 190px ;
+    }
+}

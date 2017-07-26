@@ -1,0 +1,38 @@
+/*----Bootstrap-min.css-----*/
+input[type=checkbox],
+input[type=radio] {
+    margin-top: 1px\9;
+}
+
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+    margin-top: 4px\9;
+}
+.caret {
+    border-top: 4px solid\9;
+}
+.dropdown-menu>.disabled>a:focus,
+.dropdown-menu>.disabled>a:hover {
+	filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret {
+    border-bottom: 4px solid\9
+}
+.carousel-control.left {
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+}
+.carousel-control.right {
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+}
+.carousel-indicators li {
+    background-color: #000\9;
+}
+
+/*----Bootstrap-select.css-----*/
+.bootstrap-select {
+  width: 220px \0;
+  /*IE9 and below*/
+}

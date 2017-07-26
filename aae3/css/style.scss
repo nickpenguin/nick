@@ -1,0 +1,499 @@
+@mixin font-face($family, $path, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $family ;
+		src: url('#{$path}.eot');
+		src: url('#{$path}.eot?#iefix') format('embedded-opentype'), 
+			url('#{$path}.woff') format('woff'),
+			url('#{$path}.woff2') format('woff2'), 
+			url('#{$path}.ttf') format('truetype'),
+			url('#{$path}.svg##{$family}') format('svg');
+		font-weight: $weight ;
+		font-style: $style ;
+	}
+}
+
+@include font-face('sofia_prolight', '../fonts/sofiaprolight-webfont');
+@include font-face('sofia_probold', '../fonts/sofiaprobold-webfont');
+@include font-face('sofia_pro_regularregular', '../fonts/sofiaproregular-webfont');
+
+@import 'mixin' ;
+body, html {
+	height: 100% ;
+}
+body {
+	margin: 0 ;
+	padding: 0 ;
+	font-family: 'sofia_pro_regularregular' ;
+	background-color: #000 ;
+}
+* {
+	box-sizing: border-box ;
+	outline: none ;
+}
+:invalid {
+  box-shadow: none ;
+}
+
+:-moz-submit-invalid {
+  box-shadow: none ;
+}
+
+:-moz-ui-invalid {
+  box-shadow:none ;
+}
+#aac {
+	position: relative ;
+	width: 100% ;
+	height: 100% ;
+	background-image: url(../images/aac.svg);
+	background-size: cover ;
+	background-repeat: no-repeat ;
+	background-position: center ;
+	border-bottom: 4px solid #fff ;
+	z-index: 60 ;
+
+	> div {
+		width: 100% ;
+		padding-left: 20% ;
+		padding-right: 20% ;
+		@include mdf {
+			padding-left: 12% ;
+			padding-right: 12% ;
+		}
+		@include xs {
+			padding-left: 4% ;
+			padding-right: 4% ;
+		}
+		padding-top: 140px ;
+		> img {
+			display: block ;
+			width: 100% ;
+			height: auto ;
+		}
+	}
+}
+#about {
+	position: fixed ;
+	color: #fff ;
+	font-size: 80px ;
+	@include mdf {
+		left: 12% ;
+		font-size: 64px ;
+	}
+	@include xs {
+		left: 4% ;
+		font-size: 36px ;
+	}
+	top: 50px ;
+	left: 20% ;
+	z-index: 61 ;
+}
+.dummy {
+	width: 100% ;
+	height: 100% ;
+}
+.fixed {
+	position: fixed ;
+	border-bottom:4px solid #fff ;
+	left: 50% ;
+	top: 50% ;
+	background-size: cover ;
+	background-position: center ;
+
+	> a {
+		text-decoration: none ;
+		position: absolute ;
+		right: 30px ;
+		bottom: 20px ;
+		font-size: 15px ;
+		color: #fff ;
+		@include transition(color .5s);
+		&:hover {
+			color: #abaaab ;
+		}
+		@include xs {
+			right: 10px ;
+			bottom: 10px ;
+			font-size: 14px ;
+		}
+	}
+}
+#f4.fixed > a {
+	color: #82807b ;
+	&:hover {
+		color: #454441 ;
+	}
+	@include xs {
+		color: #fff ;
+		&:hover {
+			color: #abaaab ;
+		}
+	}
+}
+.cpt {
+	position: fixed ;
+	left: 0 ;
+	top: 0 ;
+	width: 100% ;
+	height: 100% ;
+	z-index: 50 ;
+	pointer-events: none ;
+	@include opacity(0);
+	@include xs {
+		padding: 10px ;
+	}
+
+	> div {
+		font-family: 'sofia_prolight' ;
+		font-size: 22px ;
+		line-height: 32px ;
+		width: 100% ;
+		max-width: 736px ;
+		margin: auto ;
+		color: #000 ;
+		background-color: rgba(255,255,255,.9);
+		padding: 30px ;
+		@include lg {
+			font-size: 18px ;
+			line-height: 28px ;
+			max-width: 600px ;
+			padding: 20px ;
+		}
+		@include xs {
+			font-size: 14px ;
+			line-height: 24px ;
+			max-width: 100% ;
+			padding: 10px ;
+		}
+	}
+}
+.cpt-l > div {
+	float: left ;
+	margin-left: 30px ;
+	@include lg {
+		margin-left: 20px ;
+	}
+	@include xs {
+		float: none ;
+		margin-right: 0 ;
+		margin-left: 0 ;
+	}
+}
+.cpt-r > div {
+	float: right ;
+	margin-right: 30px ;
+	@include lg {
+		margin-right: 20px ;
+	}
+	@include xs {
+		float: none ;
+		margin-right: 0 ;
+		margin-left: 0 ;
+	}
+}
+.cpt-c > div {
+	text-align: center ;
+	@include xs {
+		text-align: left ;
+	}
+}
+#android-toolbal {
+	display: none ;
+	position: fixed ;
+	left: 0 ;
+	top: 0;
+	z-index: 998 ;
+	background: #000 ;
+	height: 22px ;
+	width: 100% ;
+}
+footer {
+	color: #fff ;
+	@extend %clearfix ;
+	position: static ;
+	width: 100% ;
+	background-color: #000 ;
+	padding-top: 50px ;
+	@include mdf {
+		padding-top: 30px ;
+	}
+
+	> div {
+		max-width: 1280px ;
+		margin: auto ;
+		@extend %clearfix ;
+
+		> div {
+			&:first-child {
+				float: left ;
+				margin-left: 80px ;
+				@extend %clearfix ;
+
+				@include mdf {
+					float: none ;
+					margin-left: 50px ;
+				}
+				@include xs {
+					float: none ;
+					margin-left: 10px ;
+				}
+			}
+			&:nth-child(2) {
+				float: right ;
+				margin-right: 50px ;
+				@include mdf {
+					float: none ;
+					margin-left: 50px ;
+					margin-right: 50px ;
+				}
+				@include xs {
+					margin-left: 10px ;
+					margin-right: 10px ;
+				}
+			}
+		}
+	}
+
+	nav {
+		float: left ;
+		&:not(:last-child) {
+			margin-right: 72px ;
+			@include xs {
+				margin-right: 20px ;
+			}
+		}
+
+		> a {
+			display: block ;
+			color: #fff ;
+			font-family: 'sofia_probold' ;
+			font-size: 14px ;
+			text-decoration: none ;
+			line-height: 33px ;
+			@include transition(color .5s);
+			&:hover {
+				color: #abaaab ;
+			}
+		}
+	}
+
+	#social {
+		clear: left ;
+		padding-top: 13px ;
+
+		a {
+			display: block ;
+			float: left ;
+			width: 30px ;
+			text-align: center ;
+			color: #fff ;
+			font-size: 30px ;
+			&:not(:last-child) {
+				margin-right: 16px ;
+			}
+			@include transition(color .5s);
+			&:hover {
+				color: #abaaab ;
+			}
+		}
+	}
+
+	> p {
+		text-align: center ;
+		font-size: 15px ;
+		margin: 20px 0 ;
+		width: 100% ;
+	}
+
+	h3 {
+		margin: 0 ;
+		font-family: 'sofia_probold' ;
+		font-weight: normal ;
+		font-size: 23px ;
+		margin-bottom: 5px ;
+		@include mdf {
+			margin-top: 13px ;
+		}
+	}
+
+	h4 {
+		font-weight: normal ;
+		font-size: 18px ;
+		margin: 0 ;
+		margin-bottom: 36px ;
+		@include mdf {
+			margin-bottom: 13px ;
+		}
+	}
+
+	a#footer-logo {
+		display: block ;
+		margin-bottom: 20px ;
+		@include mdf {
+			
+		}
+	}
+}
+.mi {
+	@include mdf {
+		display: none ;
+	}
+}
+form[name="email-form"] {
+	position: relative ;
+	min-width: 396px ;
+
+	@include mdf {
+		min-width: 0 ;
+	}
+
+	input[type="email"] {
+		display: block ;
+		width: 100% ;
+		height: 65px ;
+		border-color: #fff ;
+		font-size:16px ; 
+		background: none ;
+		padding-right: 60px ;
+		padding-left: 25px ;
+		border-radius: 9px ;
+		border-style: solid ;
+		border-width: 1px ;
+		color: #333 ;
+		&:hover, &:focus {
+			border-color:#3f72fa ;
+			background: #fff ;
+			color: #444 ;
+			@include prefix(box-shadow, (inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(63, 114, 250, .6)));
+		}
+	}
+
+	> button {
+		position: absolute ;
+		cursor: pointer ;
+		width: 60px ;
+		height: 63px ;
+		right: 0 ; 
+		top: 1px ;
+		border-radius: 0 9px 9px 0px ;
+		background: #fff ;
+		border: none ;
+		line-height: 43px ;
+		color:#222222 ;
+		text-align: center ;
+		font-size: 35px ;
+	}
+}
+#interface {
+	display: none ;
+	@include opacity(0);
+	position: fixed ;
+	top: 0 ;
+	width: 100% ;
+	z-index: 60 ;
+
+	> nav {
+		display: flex ;
+		padding: 0 25px ;
+ 		margin-top: 5px ;
+		width: 100% ;
+
+		a {
+			display: block ;
+			line-height: 82px ;
+			margin: 0 18px ;
+			text-decoration: none ; 
+			color: #fff ;
+			font-family: "sofia_probold" ;
+			font-size: 14px ;
+			letter-spacing: 0.8px ;
+			@include transition(color .5s);
+			&:hover {
+				color: #abaaab ;
+			}
+
+			> i {
+				font-size: 20px ;
+			}
+			@include mdf {
+				display: none ;
+			}
+		}
+
+		> a#mobile-toggle {
+			display: none ;
+			padding: 10px ;
+			line-height: 0 ;
+			margin: 21px -10px 0 0 ;
+			@include mdf {
+				display: block ;
+			}
+			.icon-bar {
+				display: block ;
+				width: 26px ;
+				height: 4px ;
+				background: #fff ;
+			}
+			.icon-bar + .icon-bar {
+				margin-top: 4px ;
+			}
+		}
+
+		> div#nav-logo {
+			flex-grow: 1 ;
+			padding-right: 88px ;
+
+			> a {
+				display: block ;
+				width: 82px ;
+				height: 82px ;
+				margin: auto ;
+				padding-right: 0 ;
+				@include mdf {
+					margin-left: 0 ;
+				}
+			}
+		}
+
+		> div#sign-up {
+
+			@include mdf {
+				display: none ;
+				padding: 20px 12px ;
+			}
+
+			> a {
+				border: 1px solid #fff ;
+				text-align: center ;
+				padding: 10px 17px ;
+				line-height: 20px ;
+				border-radius: 4px ;
+				margin-top: 20px ;
+			}
+		}
+	}
+}
+nav#mobile-menu {
+	display: none ;
+	padding: 20px 12px ;
+	position: fixed ;
+	right: 24px ;
+	top: 72px ;
+	z-index: 60 ;
+	background-color: rgba(0,0,0,.6);
+	text-align: right ;
+
+	> a {
+		display: block ;
+		color: #fff ;
+		font-family: "sofia_probold" ;
+		font-size: 13px ;
+		letter-spacing: 0.8px ;
+		text-decoration: none ;
+		line-height: 25px ;
+		@include transition(color .5s);
+		&:hover {
+			color: #abaaab ;
+		}
+	}
+}

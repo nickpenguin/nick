@@ -1,0 +1,491 @@
+@font-face {
+  font-family: "sofia_prolight";
+  src: url("../fonts/sofiaprolight-webfont.eot");
+  src: url("../fonts/sofiaprolight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sofiaprolight-webfont.woff") format("woff"), url("../fonts/sofiaprolight-webfont.woff2") format("woff2"), url("../fonts/sofiaprolight-webfont.ttf") format("truetype"), url("../fonts/sofiaprolight-webfont.svg#sofia_prolight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "sofia_probold";
+  src: url("../fonts/sofiaprobold-webfont.eot");
+  src: url("../fonts/sofiaprobold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sofiaprobold-webfont.woff") format("woff"), url("../fonts/sofiaprobold-webfont.woff2") format("woff2"), url("../fonts/sofiaprobold-webfont.ttf") format("truetype"), url("../fonts/sofiaprobold-webfont.svg#sofia_probold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "sofia_pro_regularregular";
+  src: url("../fonts/sofiaproregular-webfont.eot");
+  src: url("../fonts/sofiaproregular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sofiaproregular-webfont.woff") format("woff"), url("../fonts/sofiaproregular-webfont.woff2") format("woff2"), url("../fonts/sofiaproregular-webfont.ttf") format("truetype"), url("../fonts/sofiaproregular-webfont.svg#sofia_pro_regularregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+footer, footer > div, footer > div > div:first-child {
+  *zoom: 1; }
+  footer:before, footer > div:before, footer > div > div:first-child:before, footer:after, footer > div:after, footer > div > div:first-child:after {
+    content: " ";
+    display: table; }
+  footer:after, footer > div:after, footer > div > div:first-child:after {
+    clear: both; }
+
+body, html {
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "sofia_pro_regularregular";
+  background-color: #000; }
+
+* {
+  box-sizing: border-box;
+  outline: none; }
+
+:invalid {
+  box-shadow: none; }
+
+:-moz-submit-invalid {
+  box-shadow: none; }
+
+:-moz-ui-invalid {
+  box-shadow: none; }
+
+#aac {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/aac.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 4px solid #fff;
+  z-index: 60; }
+  #aac > div {
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 140px; }
+    @media only screen and (max-width: 980px) {
+      #aac > div {
+        padding-left: 12%;
+        padding-right: 12%; } }
+    @media only screen and (max-width: 414px) {
+      #aac > div {
+        padding-left: 4%;
+        padding-right: 4%; } }
+    #aac > div > img {
+      display: block;
+      width: 100%;
+      height: auto; }
+
+#about {
+  position: fixed;
+  color: #fff;
+  font-size: 80px;
+  top: 50px;
+  left: 20%;
+  z-index: 61; }
+  @media only screen and (max-width: 980px) {
+    #about {
+      left: 12%;
+      font-size: 64px; } }
+  @media only screen and (max-width: 414px) {
+    #about {
+      left: 4%;
+      font-size: 36px; } }
+
+.dummy {
+  width: 100%;
+  height: 100%; }
+
+.fixed {
+  position: fixed;
+  border-bottom: 4px solid #fff;
+  left: 50%;
+  top: 50%;
+  background-size: cover;
+  background-position: center; }
+  .fixed > .cpt-inner {
+    pointer-events: none;
+    font-family: "sofia_prolight";
+    font-size: 22px;
+    line-height: 32px;
+    width: 100%;
+    max-width: 736px;
+    margin: auto;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 30px; }
+    @media only screen and (max-width: 1024px) {
+      .fixed > .cpt-inner {
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 600px;
+        padding: 20px; } }
+    @media only screen and (max-width: 980px) {
+      .fixed > .cpt-inner {
+        font-size: 16px;
+        line-height: 26px;
+        padding: 18px; } }
+    @media only screen and (max-width: 414px) {
+      .fixed > .cpt-inner {
+        font-size: 15px;
+        line-height: 25px;
+        max-width: 100%;
+        padding: 10px; } }
+  .fixed > a {
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    font-size: 15px;
+    color: #fff;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s; }
+    .fixed > a:hover {
+      color: #abaaab; }
+    @media only screen and (max-width: 414px) {
+      .fixed > a {
+        right: 10px;
+        bottom: 10px;
+        font-size: 14px; } }
+
+#f4.fixed > a {
+  color: #82807b; }
+  #f4.fixed > a:hover {
+    color: #454441; }
+  @media only screen and (max-width: 414px) {
+    #f4.fixed > a {
+      color: #fff; }
+      #f4.fixed > a:hover {
+        color: #abaaab; } }
+
+.cpt {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0;
+  filter: alpha(opacity=0); }
+  @media only screen and (max-width: 414px) {
+    .cpt {
+      padding: 10px; } }
+  .cpt > div {
+    font-family: "sofia_prolight";
+    font-size: 22px;
+    line-height: 32px;
+    width: 100%;
+    max-width: 736px;
+    margin: auto;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px; }
+    @media only screen and (max-width: 1024px) {
+      .cpt > div {
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 600px;
+        padding: 20px; } }
+    @media only screen and (max-width: 980px) {
+      .cpt > div {
+        font-size: 16px;
+        line-height: 26px;
+        padding: 18px; } }
+    @media only screen and (max-width: 414px) {
+      .cpt > div {
+        font-size: 15px;
+        line-height: 25px;
+        max-width: 100%;
+        padding: 10px; } }
+
+.cpt-l > div {
+  float: left;
+  margin-left: 30px; }
+  @media only screen and (max-width: 1024px) {
+    .cpt-l > div {
+      margin-left: 20px; } }
+  @media only screen and (max-width: 414px) {
+    .cpt-l > div {
+      float: none;
+      margin-right: 0;
+      margin-left: 0; } }
+
+.cpt-r > div {
+  float: right;
+  margin-right: 30px; }
+  @media only screen and (max-width: 1024px) {
+    .cpt-r > div {
+      margin-right: 20px; } }
+  @media only screen and (max-width: 414px) {
+    .cpt-r > div {
+      float: none;
+      margin-right: 0;
+      margin-left: 0; } }
+
+.cpt-c > div {
+  text-align: center; }
+  @media only screen and (max-width: 414px) {
+    .cpt-c > div {
+      text-align: left; } }
+
+#android-toolbal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 998;
+  background: #000;
+  height: 22px;
+  width: 100%; }
+
+footer {
+  color: #fff;
+  position: static;
+  width: 100%;
+  background-color: #000;
+  padding-top: 50px; }
+  @media only screen and (max-width: 980px) {
+    footer {
+      padding-top: 30px; } }
+  footer > div {
+    max-width: 1280px;
+    margin: auto; }
+    footer > div > div:first-child {
+      float: left;
+      margin-left: 80px; }
+      @media only screen and (max-width: 980px) {
+        footer > div > div:first-child {
+          float: none;
+          margin-left: 50px; } }
+      @media only screen and (max-width: 414px) {
+        footer > div > div:first-child {
+          float: none;
+          margin-left: 10px; } }
+    footer > div > div:nth-child(2) {
+      float: right;
+      margin-right: 50px; }
+      @media only screen and (max-width: 980px) {
+        footer > div > div:nth-child(2) {
+          float: none;
+          margin-left: 50px;
+          margin-right: 50px; } }
+      @media only screen and (max-width: 414px) {
+        footer > div > div:nth-child(2) {
+          margin-left: 10px;
+          margin-right: 10px; } }
+  footer nav {
+    float: left; }
+    footer nav:not(:last-child) {
+      margin-right: 72px; }
+      @media only screen and (max-width: 414px) {
+        footer nav:not(:last-child) {
+          margin-right: 20px; } }
+    footer nav > a {
+      display: block;
+      color: #fff;
+      font-family: "sofia_probold";
+      font-size: 14px;
+      text-decoration: none;
+      line-height: 33px;
+      -webkit-transition: color 0.5s;
+      -moz-transition: color 0.5s;
+      -ms-transition: color 0.5s;
+      -o-transition: color 0.5s;
+      transition: color 0.5s; }
+      footer nav > a:hover {
+        color: #abaaab; }
+  footer #social {
+    clear: left;
+    padding-top: 13px; }
+    footer #social a {
+      display: block;
+      float: left;
+      width: 30px;
+      text-align: center;
+      color: #fff;
+      font-size: 30px;
+      -webkit-transition: color 0.5s;
+      -moz-transition: color 0.5s;
+      -ms-transition: color 0.5s;
+      -o-transition: color 0.5s;
+      transition: color 0.5s; }
+      footer #social a:not(:last-child) {
+        margin-right: 16px; }
+      footer #social a:hover {
+        color: #abaaab; }
+  footer > p {
+    text-align: center;
+    font-size: 15px;
+    margin: 20px 0;
+    width: 100%; }
+  footer h3 {
+    margin: 0;
+    font-family: "sofia_probold";
+    font-weight: normal;
+    font-size: 23px;
+    margin-bottom: 5px; }
+    @media only screen and (max-width: 980px) {
+      footer h3 {
+        margin-top: 13px; } }
+  footer h4 {
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 36px; }
+    @media only screen and (max-width: 980px) {
+      footer h4 {
+        margin-bottom: 13px; } }
+  footer a#footer-logo {
+    display: block;
+    margin-bottom: 20px; }
+
+@media only screen and (max-width: 980px) {
+  .mi {
+    display: none; } }
+
+form[name="email-form"] {
+  position: relative;
+  min-width: 396px; }
+  @media only screen and (max-width: 980px) {
+    form[name="email-form"] {
+      min-width: 0; } }
+  form[name="email-form"] input[type="email"] {
+    display: block;
+    width: 100%;
+    height: 65px;
+    border-color: #fff;
+    font-size: 16px;
+    background: none;
+    padding-right: 60px;
+    padding-left: 25px;
+    border-radius: 9px;
+    border-style: solid;
+    border-width: 1px;
+    color: #333; }
+    form[name="email-form"] input[type="email"]:hover, form[name="email-form"] input[type="email"]:focus {
+      border-color: #3f72fa;
+      background: #fff;
+      color: #444;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(63, 114, 250, 0.6);
+      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(63, 114, 250, 0.6);
+      -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(63, 114, 250, 0.6);
+      -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(63, 114, 250, 0.6);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(63, 114, 250, 0.6); }
+  form[name="email-form"] > button {
+    position: absolute;
+    cursor: pointer;
+    width: 60px;
+    height: 63px;
+    right: 0;
+    top: 1px;
+    border-radius: 0 9px 9px 0px;
+    background: #fff;
+    border: none;
+    line-height: 43px;
+    color: #222222;
+    text-align: center;
+    font-size: 35px; }
+
+#interface {
+  display: none;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 60; }
+  #interface > nav {
+    display: flex;
+    padding: 0 25px;
+    margin-top: 5px;
+    width: 100%; }
+    #interface > nav a {
+      display: block;
+      line-height: 82px;
+      margin: 0 18px;
+      text-decoration: none;
+      color: #fff;
+      font-family: "sofia_probold";
+      font-size: 14px;
+      letter-spacing: 0.8px;
+      -webkit-transition: color 0.5s;
+      -moz-transition: color 0.5s;
+      -ms-transition: color 0.5s;
+      -o-transition: color 0.5s;
+      transition: color 0.5s; }
+      #interface > nav a:hover {
+        color: #abaaab; }
+      #interface > nav a > i {
+        font-size: 20px; }
+      @media only screen and (max-width: 980px) {
+        #interface > nav a {
+          display: none; } }
+    #interface > nav > a#mobile-toggle {
+      display: none;
+      padding: 10px;
+      line-height: 0;
+      margin: 21px -10px 0 0; }
+      @media only screen and (max-width: 980px) {
+        #interface > nav > a#mobile-toggle {
+          display: block; } }
+      #interface > nav > a#mobile-toggle .icon-bar {
+        display: block;
+        width: 26px;
+        height: 4px;
+        background: #fff; }
+      #interface > nav > a#mobile-toggle .icon-bar + .icon-bar {
+        margin-top: 4px; }
+    #interface > nav > div#nav-logo {
+      flex-grow: 1;
+      padding-right: 88px; }
+      #interface > nav > div#nav-logo > a {
+        display: block;
+        width: 82px;
+        height: 82px;
+        margin: auto;
+        padding-right: 0; }
+        @media only screen and (max-width: 980px) {
+          #interface > nav > div#nav-logo > a {
+            margin-left: 0; } }
+    @media only screen and (max-width: 980px) {
+      #interface > nav > div#sign-up {
+        display: none;
+        padding: 20px 12px; } }
+    #interface > nav > div#sign-up > a {
+      border: 1px solid #fff;
+      text-align: center;
+      padding: 10px 17px;
+      line-height: 20px;
+      border-radius: 4px;
+      margin-top: 20px; }
+
+nav#mobile-menu {
+  display: none;
+  padding: 20px 12px;
+  position: fixed;
+  right: 24px;
+  top: 72px;
+  z-index: 60;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: right; }
+  nav#mobile-menu > a {
+    display: block;
+    color: #fff;
+    font-family: "sofia_probold";
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    line-height: 25px;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s; }
+    nav#mobile-menu > a:hover {
+      color: #abaaab; }
+
+/*# sourceMappingURL=style.css.map */
